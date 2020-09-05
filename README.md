@@ -1,6 +1,6 @@
 # class-code-style-anywhere
 
-The idea is to build the UI through the class of JS. They(ng/react/vue) just provide DOM operations. If your team has a different front-end framework, using this idea might be a good solution. If u like it. Please give me a star, thanks!
+The idea is to build the UI logic through the class of JS. They(ng/react/vue) just provide DOM operations. If your team has a different front-end framework or lib, using this idea might be a good solution. If u like it. Please give me a star, thanks!
 
 ## demo
 
