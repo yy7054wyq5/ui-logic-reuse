@@ -41,7 +41,10 @@
 
 <script src="@wuyang1023/check-list/lib/check-list.class.js"></script>
 <script>
-import { CheckList, dataCreater } from "@wuyang1023/check-list/lib/check-list.class.js";
+import {
+  CheckList,
+  dataCreater,
+} from "@wuyang1023/check-list/lib/check-list.class.js";
 
 export default {
   name: "App",
