@@ -1,0 +1,27 @@
+.pager {
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+$line-style: 1px solid #ccc;
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-bottom: $line-style;
+  border-left: $line-style;
+  th,
+  td {
+    text-align: center;
+    border-top: $line-style;
+    border-right: $line-style;
+  }
+}
