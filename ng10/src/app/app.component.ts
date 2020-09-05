@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { CheckList, dataCreater } from '../../../check-list/check-list.class';
+import { CheckList, dataCreater } from '@wuyang1023/check-list/lib/check-list.class';
 
 @Component({
   selector: 'app-root',
-  templateUrl: '../../../check-list/check-list.html',
+  templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {

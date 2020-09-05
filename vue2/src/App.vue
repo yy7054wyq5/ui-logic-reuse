@@ -27,9 +27,9 @@
         </table>
       </section>
       <section>
-        <span class="pager" @click="pre()">上一页</span>&nbsp;
-        <span class="pager" @click="next()">下一页</span>
-      </section>已选中：
+        <span class="pager" @click="pre()">pre</span>&nbsp;
+        <span class="pager" @click="next()">next</span>
+      </section>checked：
       <section>
         <ul v-for="(item, index) of checkList.getCheckedRows()" v-bind:key="index">
           <li>{{ toStr(item) }}</li>
@@ -39,9 +39,9 @@
   </div>
 </template>
 
-<script src="../../check-list/check-list.class.js"></script>
+<script src="@wuyang1023/check-list/lib/check-list.class.js"></script>
 <script>
-import { CheckList, dataCreater } from "../../check-list/check-list.class.js";
+import { CheckList, dataCreater } from "@wuyang1023/check-list/lib/check-list.class.js";
 
 export default {
   name: "App",
@@ -87,5 +87,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../check-list/check-list.class.scss";
+@import "@wuyang1023/check-list/src/check-list.class.scss";
 </style>

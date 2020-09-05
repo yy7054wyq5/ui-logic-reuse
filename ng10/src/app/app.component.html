@@ -26,13 +26,13 @@
     </table>
   </section>
   <section>
-    <span class="pager" (click)="pre()">上一页</span>&nbsp;<span
+    <span class="pager" (click)="pre()">pre</span>&nbsp;<span
       class="pager"
       (click)="next()"
-      >下一页</span
+      >next</span
     >
   </section>
-  已选中：
+  checked:
   <section>
     <!-- 在页面上直接调用方法非最佳实践，此处只为演示结果 -->
     <ul *ngFor="let item of checkList.getCheckedRows()">

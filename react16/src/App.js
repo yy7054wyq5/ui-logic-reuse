@@ -1,8 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+// import { CheckList, dataCreater } from "../../check-list/check-list.class.js";
 
 function App() {
+  import('../../check-list/check-list.class.js').then();
+
   return (
     <div className="App">
       <header className="App-header">
