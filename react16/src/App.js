@@ -7,7 +7,6 @@ import {
   dataCreater,
 } from "@wuyang1023/check-list/lib/check-list.class.js";
 
-// TODO: 实现单实例
 function App() {
   const [checkList, setCheckList] = useState(
     new CheckList({
@@ -37,14 +36,16 @@ function App() {
             onChange={() => {
               row.checked = !row.checked;
               setCheckList(
-                new CheckList({
-                  name: "react",
-                  data: JSON.parse(JSON.stringify(checkList.data)),
-                  checkedIds: checkList.getCheckedRowIds(),
-                  disabledIds: ["id0"],
-                })
+                new CheckList(
+                  {
+                    name: "react",
+                    data: JSON.parse(JSON.stringify(checkList.data)),
+                    checkedIds: checkList.getCheckedRowIds(),
+                    disabledIds: ["id0"],
+                  },
+                  checkList.getCheckedRows()
+                )
               );
-              // setCheckAll(checklist.checkAll); // 此处未能接受到实例的值
             }}
           />
         </td>
@@ -68,12 +69,15 @@ function App() {
     }
     console.log(checkList.getCheckedRowIds());
     setCheckList(
-      new CheckList({
-        name: "react",
-        data: dataCreater(pageNum, pageSize),
-        checkedIds: checkList.getCheckedRowIds(),
-        disabledIds: ["id0"],
-      })
+      new CheckList(
+        {
+          name: "react",
+          data: dataCreater(pageNum, pageSize),
+          checkedIds: checkList.getCheckedRowIds(),
+          disabledIds: ["id0"],
+        },
+        checkList.getCheckedRows()
+      )
     );
   }
 
@@ -82,14 +86,16 @@ function App() {
     if (pageNum > 1) {
       pageNum = 1;
     }
-    console.log(checkList.getCheckedRowIds());
     setCheckList(
-      new CheckList({
-        name: "react",
-        data: dataCreater(pageNum, pageSize),
-        checkedIds: checkList.getCheckedRowIds(),
-        disabledIds: ["id0"],
-      })
+      new CheckList(
+        {
+          name: "react",
+          data: dataCreater(pageNum, pageSize),
+          checkedIds: checkList.getCheckedRowIds(),
+          disabledIds: ["id0"],
+        },
+        checkList.getCheckedRows()
+      )
     );
   }
 

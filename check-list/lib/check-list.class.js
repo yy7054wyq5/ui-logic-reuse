@@ -109,6 +109,7 @@ var CheckList = /*#__PURE__*/function () {
       checkedIds: [],
       disabledIds: []
     };
+    var checkedRows = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
 
     _classCallCheck(this, CheckList);
 
@@ -122,12 +123,12 @@ var CheckList = /*#__PURE__*/function () {
 
     _defineProperty(this, "checkAllValue", false);
 
-    this.init(options);
+    this.init(options, checkedRows);
   }
 
   _createClass(CheckList, [{
     key: "init",
-    value: function init(options) {
+    value: function init(options, checkedRows) {
       var name = options.name,
           data = options.data,
           checkedIds = options.checkedIds,
@@ -137,6 +138,24 @@ var CheckList = /*#__PURE__*/function () {
       this.data = data;
       this.checkRows(checkedIds);
       this.disableRows(disabledIds);
+
+      if (checkedRows) {
+        var _iterator3 = _createForOfIteratorHelper(checkedRows),
+            _step3;
+
+        try {
+          for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+            var cr = _step3.value;
+            this.checkedRowMap[cr.id] = cr;
+            this.checkedMap[cr.id] = true;
+          }
+        } catch (err) {
+          _iterator3.e(err);
+        } finally {
+          _iterator3.f();
+        }
+      }
+
       this.checkAllValue = this.updateCheckAllValue();
     }
   }, {
@@ -144,12 +163,12 @@ var CheckList = /*#__PURE__*/function () {
     value: function updateCheckAllValue() {
       var checkedTimes = 0;
 
-      var _iterator3 = _createForOfIteratorHelper(this.sources),
-          _step3;
+      var _iterator4 = _createForOfIteratorHelper(this.sources),
+          _step4;
 
       try {
-        for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
-          var item = _step3.value;
+        for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
+          var item = _step4.value;
           var id = item.id;
 
           if (this.disabledMap[id] || this.checkedMap[id]) {
@@ -157,9 +176,9 @@ var CheckList = /*#__PURE__*/function () {
           }
         }
       } catch (err) {
-        _iterator3.e(err);
+        _iterator4.e(err);
       } finally {
-        _iterator3.f();
+        _iterator4.f();
       }
 
       return checkedTimes === this.sources.length;

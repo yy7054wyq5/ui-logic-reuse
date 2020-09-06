@@ -55,17 +55,24 @@ export class CheckList {
       data: [],
       checkedIds: [],
       disabledIds: [],
-    }
+    },
+    checkedRows = []
   ) {
-    this.init(options);
+    this.init(options, checkedRows);
   }
 
-  init(options) {
+  init(options, checkedRows) {
     const { name, data, checkedIds, disabledIds } = options;
     this.setPropNotWritable("name", name); // name 属性作为外部钩子，不可被修改
     this.data = data;
     this.checkRows(checkedIds);
     this.disableRows(disabledIds);
+    if (checkedRows) {
+      for (const cr of checkedRows) {
+        this.checkedRowMap[cr.id] = cr;
+        this.checkedMap[cr.id] = true;
+      }
+    }
     this.checkAllValue = this.updateCheckAllValue();
   }
 
