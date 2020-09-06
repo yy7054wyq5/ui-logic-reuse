@@ -7,6 +7,7 @@ import {
   dataCreater,
 } from "@wuyang1023/check-list/lib/check-list.class.js";
 
+// TODO: 实现单实例
 function App() {
   const [checkList, setCheckList] = useState(
     new CheckList({
@@ -65,6 +66,7 @@ function App() {
     if (pageNum === -1) {
       pageNum = 0;
     }
+    console.log(checkList.getCheckedRowIds());
     setCheckList(
       new CheckList({
         name: "react",
@@ -80,6 +82,7 @@ function App() {
     if (pageNum > 1) {
       pageNum = 1;
     }
+    console.log(checkList.getCheckedRowIds());
     setCheckList(
       new CheckList({
         name: "react",
