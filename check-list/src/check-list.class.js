@@ -22,6 +22,7 @@ export class CheckList {
       }
     }
     this.checkAllValue = this.updateCheckAllValue();
+    // console.log("setter data", this.data, this.checkAllValue);
   }
 
   /***** 复选操作 *****/
@@ -45,6 +46,7 @@ export class CheckList {
         delete this.checkedRowMap[rowId];
       }
     }
+    // console.log("setter checkAll", this.checkedMap);
   }
 
   constructor(
@@ -64,6 +66,7 @@ export class CheckList {
     this.data = data;
     this.checkRows(checkedIds);
     this.disableRows(disabledIds);
+    this.checkAllValue = this.updateCheckAllValue();
   }
 
   updateCheckAllValue() {
@@ -142,6 +145,7 @@ export class CheckList {
           }
           this.checkedMap[id] = value;
           this.checkedMap = { ...this.checkedMap }; // 浅拷贝触发vue响应
+          // console.log('defineCheckedPropertyOfRow', this.checkedMap);
           if (!value) {
             this.checkAllValue = false;
             delete this.checkedRowMap[id];

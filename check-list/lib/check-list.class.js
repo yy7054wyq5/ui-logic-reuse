@@ -61,7 +61,7 @@ var CheckList = /*#__PURE__*/function () {
         _iterator.f();
       }
 
-      this.checkAllValue = this.updateCheckAllValue();
+      this.checkAllValue = this.updateCheckAllValue(); // console.log("setter data", this.data, this.checkAllValue);
     }
     /***** 复选操作 *****/
 
@@ -92,7 +92,8 @@ var CheckList = /*#__PURE__*/function () {
           } else {
             delete this.checkedRowMap[rowId];
           }
-        }
+        } // console.log("setter checkAll", this.checkedMap);
+
       } catch (err) {
         _iterator2.e(err);
       } finally {
@@ -136,6 +137,7 @@ var CheckList = /*#__PURE__*/function () {
       this.data = data;
       this.checkRows(checkedIds);
       this.disableRows(disabledIds);
+      this.checkAllValue = this.updateCheckAllValue();
     }
   }, {
     key: "updateCheckAllValue",
@@ -252,6 +254,7 @@ var CheckList = /*#__PURE__*/function () {
 
             _this6.checkedMap[id] = value;
             _this6.checkedMap = _objectSpread({}, _this6.checkedMap); // 浅拷贝触发vue响应
+            // console.log('defineCheckedPropertyOfRow', this.checkedMap);
 
             if (!value) {
               _this6.checkAllValue = false;

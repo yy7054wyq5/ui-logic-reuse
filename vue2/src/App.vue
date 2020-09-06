@@ -10,8 +10,8 @@
             </th>
             <th>id</th>
             <th>checked</th>
-            <th>disabled</th>
             <th>name</th>
+            <th>disabled</th>
           </thead>
           <tbody>
             <tr v-for="(item, index) of checkList.data" v-bind:key="index">
