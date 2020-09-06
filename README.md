@@ -2,11 +2,11 @@
 
 The idea is to build the UI logic through the class of JS. They(ng/react/vue) just provide DOM operations. If your team has a different front-end framework or lib, using this idea might be a good solution. If u like it. Please give me a star, thanks!
 
-## demo
+## Notice
 
-git clone and run it by yourself. In Vue2 and ng10, the UI logic is one instance. But in React16, use hooks can't use one instance.
+git clone and run it by yourself. In Vue2 and ng10, the UI logic is one instance. But in React16, i can't use one instance to complete UI. So, if you hava a better idea, please tell me on issues. Thank you very much.
 
-## explain
+## Explain
 
 |folder name|do what||
 |-------|--|--|
