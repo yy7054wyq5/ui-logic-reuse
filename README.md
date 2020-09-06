@@ -1,6 +1,6 @@
 # class-code-style-anywhere
 
-The idea is to build the UI logic through the class of JS. They(ng/react/vue) just provide DOM operations. If your team has a different front-end framework or lib, using this idea might be a good solution. If u like it. Please give me a star, thanks!
+The idea is to build the UI logic reuseable through the class of JS. They(ng/react/vue) just provide DOM operations. If your team has a different front-end framework or lib, using this idea might be a good solution. If u like it. Please give me a star, thanks!
 
 ## Notice
 
@@ -15,4 +15,4 @@ git clone and run it by yourself. In Vue2 and ng10, the UI logic is one instance
 |react16|npm i check-list and use it in React@16|Demo in App.js. Can't use one class instance!|
 |vue2|npm i check-list and use it in VUE@2|Demo in App.vue|
 
-![avatar](./demo.png)
+![avatar](https://user-images.githubusercontent.com/11879742/92328596-6cd5d300-f094-11ea-8b58-8df14dd718c3.png)
