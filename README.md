@@ -4,7 +4,7 @@ The idea is to build the UI logic reuseable through the class of JS. They(ng/rea
 
 ## Notice
 
-git clone and run it by yourself. In Vue2 and ng10, the UI logic is one instance. But in React16, i can't use one instance to complete UI. So, if you hava a better idea, tell me on issues. Thank you very much. This test demo is a poor development experience, lack of tips.
+git clone and run it by yourself. In Vue2 and ng10, the UI logic is one instance. But in React16, i can't use one instance to complete UI. So, if you hava a better idea, tell me on issues. Thank you. This test demo is a poor development experience, lack of tips.
 
 ## Results
 
