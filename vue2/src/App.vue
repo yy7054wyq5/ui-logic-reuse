@@ -1,6 +1,11 @@
 
 <template>
   <div id="app">
+    <section>
+      <span class="pager" @click="pre()">pre</span>&nbsp;
+      <span class="pager" @click="next()">next</span>
+      <span>  {{ pageSize }}条</span>
+    </section>
     <section style="width: 30vw">
       <section>
         <table>
@@ -26,15 +31,12 @@
           </tbody>
         </table>
       </section>
-      <section>
-        <span class="pager" @click="pre()">pre</span>&nbsp;
-        <span class="pager" @click="next()">next</span>
-      </section>checked：
+      <!-- checked：
       <section>
         <ul v-for="(item, index) of checkList.getCheckedRows()" v-bind:key="index">
           <li>{{ toStr(item) }}</li>
         </ul>
-      </section>
+      </section>-->
     </section>
   </div>
 </template>
@@ -51,7 +53,7 @@ export default {
   data: function () {
     return {
       pageNum: 0,
-      pageSize: 5,
+      pageSize: 1000,
       checkList: new CheckList({
         name: "vue",
         checkedIds: [],

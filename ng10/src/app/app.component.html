@@ -1,5 +1,13 @@
 <section style="width: 30vw">
   <section>
+    <span class="pager" (click)="pre()">pre</span>&nbsp;<span
+      class="pager"
+      (click)="next()"
+      >next</span
+    >
+    <span>  {{ pageSize }}条</span>
+  </section>
+  <section>
     <table>
       <thead>
         <th><input type="checkbox" [(ngModel)]="checkList.checkAll" /></th>
@@ -25,18 +33,11 @@
       </tbody>
     </table>
   </section>
+
+  <!-- checked: 在页面上直接调用方法非最佳实践，此处只为演示结果
   <section>
-    <span class="pager" (click)="pre()">pre</span>&nbsp;<span
-      class="pager"
-      (click)="next()"
-      >next</span
-    >
-  </section>
-  checked:
-  <section>
-    <!-- 在页面上直接调用方法非最佳实践，此处只为演示结果 -->
     <ul *ngFor="let item of checkList.getCheckedRows()">
       <li>{{ item | json }}</li>
     </ul>
-  </section>
+  </section> -->
 </section>

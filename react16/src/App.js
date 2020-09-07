@@ -8,10 +8,11 @@ import {
 } from "@wuyang1023/check-list/lib/check-list.class.js";
 
 function App() {
+  const size = 1000;
   const [checkList, setCheckList] = useState(
     new CheckList({
       name: "react",
-      data: dataCreater(0, 5),
+      data: dataCreater(0, size),
       checkedIds: ["id0"],
       disabledIds: ["id0"],
     })
@@ -61,7 +62,7 @@ function App() {
   });
 
   let pageNum = 0;
-  const pageSize = 5;
+  const pageSize = size;
   function pre() {
     pageNum -= 1;
     if (pageNum === -1) {
@@ -103,6 +104,21 @@ function App() {
     <div className="App">
       <section style={{ width: "30vw" }}>
         <section>
+          <span
+            className="pager"
+            onClick={() => {
+              pre();
+            }}
+          >
+            pre
+          </span>
+          &nbsp;
+          <span className="pager" onClick={() => next()}>
+            next
+          </span>
+          <span>{size}</span>
+        </section>
+        <section>
           <table>
             <thead>
               <tr>
@@ -131,20 +147,6 @@ function App() {
             </thead>
             <tbody>{rows}</tbody>
           </table>
-        </section>
-        <section>
-          <span
-            className="pager"
-            onClick={() => {
-              pre();
-            }}
-          >
-            pre
-          </span>
-          &nbsp;
-          <span className="pager" onClick={() => next()}>
-            next
-          </span>
         </section>
         checked:
         <section>

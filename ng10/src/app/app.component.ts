@@ -8,7 +8,7 @@ import { CheckList, dataCreater } from '@wuyang1023/check-list/lib/check-list.cl
 })
 export class AppComponent implements OnInit {
   pageNum = 0;
-  pageSize = 5;
+  pageSize = 1000;
   title = 'ng10';
   checkList = new CheckList({
     name: 'name',

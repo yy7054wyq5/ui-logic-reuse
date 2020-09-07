@@ -1,10 +1,14 @@
-# class-code-style-anywhere
+# ui-logic-reuse
 
-The idea is to build the UI logic reuseable through the class of JS. They(ng/react/vue) just provide DOM operations. If your team has a different front-end framework or lib, using this idea might be a good solution. If u like it. Please give me a star, thanks!
+The idea is to build the UI logic reuseable through the class of JS. They(ng/react/vue) just provide DOM operations.
 
 ## Notice
 
-git clone and run it by yourself. In Vue2 and ng10, the UI logic is one instance. But in React16, i can't use one instance to complete UI. So, if you hava a better idea, please tell me on issues. Thank you very much.
+git clone and run it by yourself. In Vue2 and ng10, the UI logic is one instance. But in React16, i can't use one instance to complete UI. So, if you hava a better idea, tell me on issues. Thank you very much. This test demo is a poor development experience, lack of tips.
+
+## Results
+
+In vue2 and ng10, using this logic is very fast and easy. Because they almost have the same template and both have two-way binding. Unlike react, you need to update the state manually.
 
 ## Explain
 
